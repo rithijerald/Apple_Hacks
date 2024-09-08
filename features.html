@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Waves Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Styles for popup modal */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Background with transparency */
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #C8A2C8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .close-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Services section -->
+    <div class="services">
+        <h1>Are you Ready - See What the Hype is About</h1>
+        <div class="services__container">
+            <div class="services__card">
+                <img src="images/pic2.jpg" alt="pic" id="main__img"/>
+                <h2>Mindfulness Challenges</h2>
+                <p>Engage with our tailored mental wellness activities</p>
+                <button><a href="/mindfulness-challenge.html">Get Started</a></button>
+                
+                    
+                
+                
+            </div>
+            <!-- New Guided Exercises Card -->
+            <div class="services__card">
+                <img src="images/pic3.jpg" alt="pic" id="main__img"/>
+                <h2>Guided Exercises</h2>
+                <p>Engage with personalized exercises</p>
+                <button><a href="/guided-exercises.html">Get Started</a></button>
+            </div>
+            <!-- New Journaling Card -->
+            <div class="services__card">
+                <img src="images/pic4.jpg" alt="pic" id="main__img"/>
+                <h2>Reflect and Grow</h2>
+                <p>Start Your Journaling Journey</p>
+                <button><a href="/journaling.html">Get Started</a></button>
+            </div>
+            <!-- New Journaling Card -->
+            <div class="services__card">
+                <img src="images/pic5.jpg" alt="pic" id="main__img"/>
+                <h2>Mental Wellness</h2>
+                <p>Self Assess your Mental Wellness</p>
+                <button><a href="/mentalwellness.html">Get Started</a></button>
+            </div>
+            <!-- New Journaling Card -->
+            <div class="services__card">
+                <img src="images/pic6.jpg" alt="pic" id="main__img" />
+                <h2>Get Inspired</h2>
+                <p>Feeling low - Find Inspiration here</p>
+                <button><a href="/quotesuggestion.html">Get Started</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Investments</a>
+                    <a href="/">Terms of Service</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Investments</a>
+                    <a href="/">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo"><i class="fas faa-gem"></i>NEXT</a>
+                </div>
+                <div class="social__icons">
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="modal" id="popup-modal">
+        <div class="modal-content">
+            <h2> Here's a list of services to enhance your mood</h2>
+            <p>Curious on the image cards?</p>
+            <p>Try those mudras and you'll find yourself sleeping better</p>
+            <button class="close-btn" id="close-modal">Close</button>
+        </div>
+    </div>
+
+
+    <audio id="background-music" autoplay loop>
+        <source src="music/background_music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript for Popup -->
+    <script>
+        // Show the popup modal when the page loads
+        window.onload = function () {
+            document.getElementById("popup-modal").style.display = "block";
+        };
+
+        // Close the popup modal when the close button is clicked
+        document.getElementById("close-modal").onclick = function () {
+            document.getElementById("popup-modal").style.display = "none";
+        };
+    </script>
+</body>
+
+</html>

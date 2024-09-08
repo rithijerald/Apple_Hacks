@@ -1,0 +1,147 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #C8A2C8;
+    /* Light purple background */
+    color: #fff;
+    /* White text color */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #9c6da5;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#navbar__logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar__item {
+    display: inline-block;
+}
+
+.navbar__links {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #FF4C4C;
+}
+
+.navbar__btn .button {
+    background-color: #FF4C4C;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar__btn .button:hover {
+    background-color: #FF1A1A;
+}
+
+
+/* Guided Exercises container */
+.guided-exercises {
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #9c6da5;
+    /* Darker purple background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Exercise box styling */
+.exercise {
+    background-color: #292929;
+    /* Dark box background */
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.exercise h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.exercise p,
+.exercise ol {
+    color: #ccc;
+    /* Lighter text in lists and paragraphs */
+    font-size: 16px;
+}
+
+.exercise ol {
+    margin-left: 20px;
+}
+
+/* Buttons for exercises */
+.exercise button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #C8A2C8;
+    /* Matching purple button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exercise button:hover {
+    background-color: white;
+    /* White on hover with purple text */
+    color: #C8A2C8;
+}
+
+/* Timer display styles */
+#timer-display,
+#breathing-timer-display,
+#meditation-timer-display,
+#stress-relief-timer-display {
+    margin-top: 10px;
+    font-size: 1.4em;
+    color: #C8A2C8;
+    /* Light purple timer color */
+    text-align: center;
+}

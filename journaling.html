@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="journaling.css"> <!-- Optional: Separate stylesheet for this page -->
+        <title>Daily Journaling</title>
+    </head>
+
+<body>
+    <!-- Navbar section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">WELLNESS WAVES</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/Features.html" class="navbar__links">Features</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="journaling-container">
+        <div class="header">
+            <h1>JOURNAL YOUR DAY</h1>
+            <label for="journal-date" class="date-label">Select Date:</label>
+            <input type="date" id="journal-date" class="date-picker">
+        </div>
+
+        <div class="journal-section">
+            <textarea placeholder="Write your thoughts here..." class="journal-textarea"></textarea>
+            <div class="separator">Or Record Your Voice</div>
+            <div class="voice-recorder">
+                <button class="button start-button">Start Recording</button>
+                <button class="button stop-button">Stop Recording</button>
+                <audio controls class="audio-player">
+                    <source src="" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="button save-button">Save Entry</button>
+            <button class="button clear-button">Clear</button>
+        </div>
+    </div>
+</body>
+
+</html>

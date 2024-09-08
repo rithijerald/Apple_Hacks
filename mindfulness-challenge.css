@@ -1,0 +1,115 @@
+body {
+    background-color: #C8A2C8;
+    /* Match the dark background of the main page */
+    color: #ffffff;
+    /* White text color for readability */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #9c6da5;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#navbar__logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar__item {
+    display: inline-block;
+}
+
+.navbar__links {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #FF4C4C;
+}
+
+.navbar__btn .button {
+    background-color: #FF4C4C;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar__btn .button:hover {
+    background-color: #FF1A1A;
+}
+/* Mindfulness Challenge Section */
+.mindfulness-challenge {
+    background-color: #C8A2C8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.mindfulness-challenge__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #9c6da5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.mindfulness-challenge h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.mindfulness-challenge p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.mindfulness-challenge ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mindfulness-challenge ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.mindfulness-challenge ul li strong {
+    color: white;
+}
+
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guided Exercises</title>
+    <link rel="stylesheet" href="guided-exercises.css" />
+</head>
+
+<body>
+    <!-- Navbar section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">WELLNESS WAVES</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/Features.html" class="navbar__links">Features</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Guided Exercises section -->
+    <div class="guided-exercises">
+        <h1>Guided Exercises</h1>
+
+        <!-- Breathing Exercise -->
+        <div class="exercise">
+            <h2>Guided Breathing Exercise</h2>
+            <p>Find a comfortable position, close your eyes, and focus on your breathing. Follow these steps:</p>
+            <ol>
+                <li>Inhale deeply through your nose for 4 seconds.</li>
+                <li>Hold your breath for 4 seconds.</li>
+                <li>Exhale slowly through your mouth for 6 seconds.</li>
+                <li>Pause for 2 seconds before the next breath.</li>
+            </ol>
+            <button onclick="startBreathingTimer()">Start Breathing Exercise</button>
+            <button onclick="stopBreathingTimer()">Stop Breathing Exercise</button>
+            <div id="breathing-timer-display">Timer: 00:00</div>
+        </div>
+
+        <!-- Meditation Timer -->
+        <div class="exercise">
+            <h2>Meditation Timer</h2>
+            <p>Set a timer for your meditation session. Choose a duration that suits you and follow these steps:</p>
+            <label for="meditation-duration">Set Duration (minutes):</label>
+            <input type="number" id="meditation-duration" min="1" max="60" value="5">
+            <button onclick="startMeditationTimer()">Start Meditation Timer</button>
+            <button onclick="stopMeditationTimer()">Stop Meditation Timer</button>
+            <div id="meditation-timer-display">Timer: 00:00</div>
+        </div>
+
+        <!-- Stress Relief Exercise -->
+        <div class="exercise">
+            <h2>Stress Relief Exercise</h2>
+            <p>Try this quick exercise to relieve stress:</p>
+            <ol>
+                <li>Find a quiet place to sit comfortably.</li>
+                <li>Place your hands on your lap and close your eyes.</li>
+                <li>Take 10 slow, deep breaths, focusing on the sensation of your breath.</li>
+                <li>Visualize a peaceful place and imagine yourself there for a few minutes.</li>
+            </ol>
+            <button onclick="startStressReliefTimer()">Start Stress Relief Exercise</button>
+            <button onclick="stopStressReliefTimer()">Stop Stress Relief Exercise</button>
+            <div id="stress-relief-timer-display">Timer: 00:00</div>
+        </div>
+    </div>
+
+    <!-- JavaScript for timers -->
+    <script>
+        // Timer logic for Breathing Exercise
+        let breathingTimer;
+        let breathingSeconds = 0;
+
+        function startBreathingTimer() {
+            if (breathingTimer) clearInterval(breathingTimer);
+            breathingSeconds = 0;
+            breathingTimer = setInterval(function () {
+                breathingSeconds++;
+                document.getElementById('breathing-timer-display').innerText = `Timer: ${formatTime(breathingSeconds)}`;
+            }, 1000);
+        }
+
+        function stopBreathingTimer() {
+            clearInterval(breathingTimer);
+        }
+
+        // Timer logic for Meditation
+        let meditationTimer;
+        let meditationDuration = 0;
+
+        function startMeditationTimer() {
+            if (meditationTimer) clearInterval(meditationTimer);
+            meditationDuration = parseInt(document.getElementById('meditation-duration').value) * 60;
+            meditationTimer = setInterval(function () {
+                if (meditationDuration <= 0) {
+                    clearInterval(meditationTimer);
+                    document.getElementById('meditation-timer-display').innerText = 'Time\'s up!';
+                    return;
+                }
+                meditationDuration--;
+                document.getElementById('meditation-timer-display').innerText = `Timer: ${formatTime(meditationDuration)}`;
+            }, 1000);
+        }
+
+        function stopMeditationTimer() {
+            clearInterval(meditationTimer);
+        }
+
+        // Timer logic for Stress Relief
+        let stressReliefTimer;
+        let stressReliefSeconds = 0;
+
+        function startStressReliefTimer() {
+            if (stressReliefTimer) clearInterval(stressReliefTimer);
+            stressReliefSeconds = 0;
+            stressReliefTimer = setInterval(function () {
+                stressReliefSeconds++;
+                document.getElementById('stress-relief-timer-display').innerText = `Timer: ${formatTime(stressReliefSeconds)}`;
+            }, 1000);
+        }
+
+        function stopStressReliefTimer() {
+            clearInterval(stressReliefTimer);
+        }
+
+        // Format time in MM:SS
+        function formatTime(seconds) {
+            let minutes = Math.floor(seconds / 60);
+            let secs = seconds % 60;
+            return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+    </script>
+</body>
+
+</html>

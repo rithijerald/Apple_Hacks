@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mentalwellness.css">
+    <title>Mental Wellness Self-Assessment</title>
+</head>
+
+<body>
+    <!-- Navbar section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">WELLNESS WAVES</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/Features.html" class="navbar__links">Features</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content section -->
+    <div class="container">
+        <h1>Mental Wellness Self-Assessment</h1>
+        <form id="assessmentForm">
+            <div class="question">
+                <label>How often have you felt anxious in the past week?</label>
+                <select name="anxiety" required>
+                    <option value="0">Not at all</option>
+                    <option value="1">A little</option>
+                    <option value="2">Moderately</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>How often have you felt overwhelmed by your responsibilities?</label>
+                <select name="overwhelmed" required>
+                    <option value="0">Not at all</option>
+                    <option value="1">A little</option>
+                    <option value="2">Moderately</option>
+                    <option value="3">Very often</option>
+                </select>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
